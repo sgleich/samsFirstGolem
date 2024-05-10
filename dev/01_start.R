@@ -53,5 +53,5 @@ golem::use_utils_server()
 
 # You're now set! ----
 
-golem::run_dev()
+#golem::run_dev()
 

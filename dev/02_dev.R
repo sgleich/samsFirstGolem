@@ -17,11 +17,17 @@
 ## Amend DESCRIPTION with dependencies read from package code parsing
 ## install.packages('attachment') # if needed.
 attachment::att_amend_desc()
+usethis::use_package("ggplot2")
+usethis::use_package("shiny")
+usethis::use_package("reshape2")
+usethis::use_package("lubridate")
+usethis::use_package("tidyverse",type="depends")
 
 ## Add modules ----
 ## Create a module infrastructure in R/
-golem::add_module(name = "name_of_module1") # Name of the module
-golem::add_module(name = "name_of_module2") # Name of the module
+golem::add_module(name = "filter_mod") # Name of the module
+golem::add_fct("subsetTax")
+
 
 ## Add internal datasets ----
 ## If you have data in your package
