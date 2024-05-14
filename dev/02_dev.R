@@ -25,8 +25,11 @@ usethis::use_package("tidyverse",type="depends")
 
 ## Add modules ----
 ## Create a module infrastructure in R/
-golem::add_module(name = "filter_mod") # Name of the module
+golem::add_module(name = "filter")
+golem::add_module(name = "plot")
+golem::add_module(name = "plotTreat")# Name of the module
 golem::add_fct("subsetTax")
+golem::add_fct("subsetTreat")
 
 
 ## Add internal datasets ----

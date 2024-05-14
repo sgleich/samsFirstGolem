@@ -7,7 +7,6 @@
 #' @noRd
 
 subsetTax <- function(data,tax){
-  set.seed(100)
   data$Feature.ID <- NULL
   if(tax=="Whole Community"){data$Taxon <- data$Group}
   data$Group <- NULL

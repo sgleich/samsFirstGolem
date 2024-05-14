@@ -5,16 +5,12 @@
 #' @import shiny
 #' @noRd
 app_ui <- function(request) {
-  shiny::fluidPage(
-    shiny::titlePanel("PERIFIX Experiment"),
-        shiny::h5("PERIFIX Experiment shiny app made using a {golem} framework"),
-        mod_filter_mod_ui("filter_mod_1"),
-        mod_try_mod_ui("try_mod_1"),
-      shiny::mainPanel(
-        # Placeholder for the plot
-      )
-    )
-  }
+  shiny::navbarPage("PERIFIX {golem} App",
+                    h5("Welcome to the PERIFIX Experiment interactive web application. This application was made using the {golem} Shiny framework."),
+                    shiny::tabPanel("Treatment vs. Abundance",
+                                    shiny::mainPanel(mod_filter_ui("filter_mod_1"),mod_plot_ui("try_mod_1"))),
+                    shiny::tabPanel("Date vs. Abundance",
+                                    shiny::mainPanel(mod_filter_ui("filter_mod_2"),mod_plotTreat_ui("plotTreat_1"))))}
 
 
 
