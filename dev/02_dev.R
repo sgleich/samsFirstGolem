@@ -21,15 +21,17 @@ usethis::use_package("ggplot2")
 usethis::use_package("shiny")
 usethis::use_package("reshape2")
 usethis::use_package("lubridate")
+usethis::use_package("randomcoloR")
 usethis::use_package("tidyverse",type="depends")
 
 ## Add modules ----
 ## Create a module infrastructure in R/
-golem::add_module(name = "filter")
-golem::add_module(name = "plot")
-golem::add_module(name = "plotTreat")# Name of the module
+golem::add_module(name = "filterTax")
+golem::add_module(name = "plotDate")
+golem::add_module(name = "plotTreat")
+golem::add_module(name="runNMDS")
 golem::add_fct("subsetTax")
-golem::add_fct("subsetTreat")
+
 
 
 ## Add internal datasets ----

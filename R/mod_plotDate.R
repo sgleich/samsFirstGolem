@@ -7,7 +7,7 @@
 #' @noRd
 #'
 #' @importFrom shiny NS tagList
-mod_plot_ui <- function(id){
+mod_plotDate_ui <- function(id){
   ns <- NS(id)
   shiny::tagList(
     shiny::selectInput(ns("date"), "Select Date:", choices = c("2021-08-11","2021-08-20","2021-08-27","2021-09-03","2021-09-07","2021-09-08")),
@@ -19,7 +19,7 @@ mod_plot_ui <- function(id){
 #' try_mod Server Functions
 #'
 #' @noRd
-mod_plot_server <- function(id, data){
+mod_plotDate_server <- function(id, data){
   shiny::moduleServer( id, function(input,output,session){
     ns <- session$ns
     set.seed(100)

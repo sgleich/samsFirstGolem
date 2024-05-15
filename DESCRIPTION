@@ -13,6 +13,7 @@ Imports:
     ggplot2,
     golem (>= 0.4.1),
     lubridate,
+    randomcoloR,
     reshape2,
     shiny (>= 1.8.0)
 Encoding: UTF-8

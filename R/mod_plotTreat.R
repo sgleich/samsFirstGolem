@@ -28,7 +28,7 @@ mod_plotTreat_server <- function(id,data){
       filtered <- data()
       filtered <- filtered %>% filter(Treatment == input$treat)
 
-      ggplot2::ggplot(filtered, aes(x=Date,y=m,fill=taxFin))+geom_bar(stat="identity",position="fill",color="grey")+xlab("Date")+ylab("Relative Abundance")+scale_fill_manual(name="Taxonomic Group",values=c(colrsPlot))+theme_classic(base_size=24)+theme(axis.text.x=element_text(angle=45,hjust=1))+ggtitle(paste("Treatment =",input$treat,sep=" "))}) %>% shiny::bindEvent(input$go2)
+      filtered %>% filter(Date!="2021-09-08") %>% ggplot2::ggplot(aes(x=Date,y=m,fill=taxFin))+geom_bar(stat="identity",position="fill",color="grey")+xlab("Date")+ylab("Relative Abundance")+scale_fill_manual(name="Taxonomic Group",values=c(colrsPlot))+theme_classic(base_size=24)+theme(axis.text.x=element_text(angle=45,hjust=1))+ggtitle(paste("Treatment =",input$treat,sep=" "))}) %>% shiny::bindEvent(input$go2)
     }
   )
 }
